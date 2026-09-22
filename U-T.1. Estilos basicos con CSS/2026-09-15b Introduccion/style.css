@@ -1,0 +1,9 @@
+body{
+    background-color: #e6e6cc;
+    background-image: url(./img/patron.avif);
+    /* background-repeat: no-repeat; */
+}
+ul{
+    background-color: #e6e6cc;
+    list-style-type: square;
+}

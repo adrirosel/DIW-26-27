@@ -1,0 +1,77 @@
+/* El operador : significa pseudoclase */
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+/*El asterisco representa todas las etiquetas*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  border: solid;
+  background-color: lightpink;
+  text-align: center;
+}
+/* Selectores de etiqueta */
+h1 {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
+.parrafo_negrita {
+  font-weight: bold;
+}
+/* Selectores de identificador */
+p#parrafoUno.parrafo_negrita {
+  color: darkorchid !important;
+  text-decoration: line-through;
+  text-transform: capitalize;
+}
+#parrafoUno {
+  color: gold;
+}
+/* Selectores de clase */
+
+/* Un espacio entre dos selectores indica descendencia: padre, hijo, nieto... */
+div p {
+  font-size: 1.5rem;
+}
+
+/* El mayor representa la relacion hijo */
+div > p {
+  color: red;
+}
+
+/*El operador + representa al hermano siguiente o primer hermano (adjacent sibling)*/
+
+#parrafoDos + * {
+  color: red;
+}
+
+/* El operador ~ representa a los hermanos siguientes (next siblings)*/
+
+#parrafoCinco ~ p {
+  color: greenyellow;
+}
+
+/* El operador [] hace referencia a un atributo */
+
+[disabled] {
+  color: lightgray;
+}
+
+/**/
+[data-inventado="si"] {
+  color: green;
+}
+
+[data-inventado="no"] {
+  color: blue;
+}
+select :disabled {
+  display: none;
+}
