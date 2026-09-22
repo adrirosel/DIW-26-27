@@ -1,0 +1,16 @@
+:root {
+  font-size: 24px;
+}
+
+body {
+  background-color: cyan;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+a[href^="http:"] {
+  color: red;
+}
