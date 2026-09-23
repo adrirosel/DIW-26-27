@@ -31,15 +31,20 @@ label{
     user-select: none;
 }
 
-input[type="checkbox"]{
-    display: none;
-}
 
 input[type="checkbox"]:not(:checked) + nav{
-    display: none;
+    /* display: none; */
+    /* transition-duration: 1s;
+    transition-property: height; */
+    transition: 1s height;
+    height: 0;
 }
 input[type="checkbox"]:checked + nav{
     background-color: var(--color-medio);
+    height: 120px
+}
+input[type="checkbox"]{
+    display: none;
 }
 nav{
     background-color: var(--color-medio);
