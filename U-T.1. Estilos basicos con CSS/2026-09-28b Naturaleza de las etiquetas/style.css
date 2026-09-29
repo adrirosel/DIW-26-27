@@ -1,0 +1,40 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: solid;
+}
+
+body{
+    min-height: 100dvh;
+}
+
+.contenedor-numeros{
+    margin-top: 2rem;
+    width: 50%;
+}
+
+b {
+    display:block;
+}
+
+b:nth-child(2){
+    display: inline;
+    background-color: chartreuse;
+}
+
+i {
+    display:inline-block;
+    background: lightcyan;
+    margin: 2rem;
+    width: 100px;
+    height: 100px;
+}
+code{
+    display: block;
+}

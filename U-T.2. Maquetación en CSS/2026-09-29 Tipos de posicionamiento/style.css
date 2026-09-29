@@ -1,0 +1,57 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    --color-claro: #caf0ca;
+    --color-anuncio: #520101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+    background-color: var(--color-claro)
+    
+}
+
+.anuncio {
+    background-color: var(--color-anuncio);
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    position: fixed;
+    
+    z-index: 2;
+    right: 25px;
+    top: 200px;
+}
+
+.anuncio > img{
+    width: 200px;
+}
+
+.cerrar-anuncio {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.anuncio-daw{
+    background-color: orange;
+    display: inline-block;
+    width: 350px;
+    text-align: center;
+    text-wrap: balance;
+    padding: 1rem;
+    position: relative;
+    top: 10rem;
+    left: 100px; 
+}
+
+.anuncio-daw img{
+    width: 250px;
+}
+
