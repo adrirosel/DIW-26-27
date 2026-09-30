@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoselectores before y after</title>
+
+    <style>
+        :root {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100dvh; /* dynamic viewport height */
+            display: grid;
+            place-content: center;
+            background-image: url(/gatito-3700161.webp);
+        }
+
+        .boton {
+            border: solid 5px ;
+            color: darkgreen;
+            background-color: lightblue;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .boton::before, .boton::after{
+            content: '';
+            position: absolute;
+            border: solid 5px orange;
+            border-radius: inherit;
+            display: inline-block;
+            inset: 0;
+            margin: auto;
+
+        }
+
+        .boton::before{
+            width: calc(100% - 15px);
+            height: calc(100% - 15px);
+
+        }
+
+        .boton::after{
+            border-color: chartreuse;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="boton">Abrir</div>
+    
+    
+</body>
+</html>
