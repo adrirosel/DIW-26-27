@@ -1,0 +1,40 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+    display: grid;
+    place-content: center;
+}
+.estrella{
+    position:relative;
+    border: solid 15px blue;
+    height: 10rem;
+    width: 10rem;    
+    display: grid;
+    place-items: center;
+}
+.estrella::before, .estrella::after{
+    position:absolute;
+    content: "";
+    border: inherit;
+    width: inherit;
+    height: inherit;       
+}
+
+.estrella::before{
+    rotate: 30deg;
+}
+.estrella::after{
+    rotate: 60deg;
+}
+
+
