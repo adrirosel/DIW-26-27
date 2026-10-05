@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 24px;
+      }
+      *,
+      *::after,
+      *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        /* display: grid;
+        place-content: center; */
+      }
+
+      .boton-mensajes {
+        position: relative;
+        background-color: grey;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        display: inline;
+        left: 50%;
+      }
+
+      .boton-mensajes::after {
+        position: absolute;
+        content: attr(data-cantidad);
+        top: -30%;
+        right: -10%;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        min-width: 1.25rem;
+        min-height: 1.25rem;
+        padding: 0.25rem;
+        display: inline-grid;
+        place-content: center;
+        margin-left: 0.6rem;
+      }
+    </style>
+    <script type="module">
+        
+        let contadorMensajesPendientes = 0
+        
+        /*Ejecuta indefinidamente una función.
+        El primer argumento es la función, el segundo argumento son los milisegundos entre ejecuciones*/
+    //     setInterval(function cambiarNumero(){
+    //         contadorMensajesPendientes += 1
+    //       const nDiv = document.getElementById("eDivMensajes");
+    //       nDiv.setAttribute("data-cantidad", contadorMensajesPendientes);
+    //   }, 1000);
+    const nDiv = document.getElementById("eDivMensajes");
+    
+    setInterval(()=> nDiv.setAttribute("data-cantidad", contadorMensajesPendientes+=1), 1000);
+
+    </script>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Beatae natus voluptate hic repellat.</p>
+    <p>Commodi voluptatibus quibusdam nulla veritatis.</p>
+    <p>Obcaecati, quia! In, impedit officia.</p>
+    <p>Et fugiat praesentium optio amet?</p>
+    <p>Delectus in quos at animi?</p>
+    <p>Nulla sapiente illo tempore vero!</p>
+    <p>Sint debitis maxime dolor hic.</p>
+    <p>Consequuntur illum doloremque repellat repudiandae.</p>
+    <p>Quod quaerat tempore mollitia qui?</p>
+    <div id="eDivMensajes" data-cantidad="0" class="boton-mensajes">
+      Ver mensajes
+    </div>
+
+     <p>Lorem ipsum dolor sit amet.</p>
+    <p>Beatae natus voluptate hic repellat.</p>
+    <p>Commodi voluptatibus quibusdam nulla veritatis.</p>
+    <p>Obcaecati, quia! In, impedit officia.</p>
+    <p>Et fugiat praesentium optio amet?</p>
+    <p>Delectus in quos at animi?</p>
+    <p>Nulla sapiente illo tempore vero!</p>
+    <p>Sint debitis maxime dolor hic.</p>
+    <p>Consequuntur illum doloremque repellat repudiandae.</p>
+    <p>Quod quaerat tempore mollitia qui?</p>
+  </body>
+</html>
