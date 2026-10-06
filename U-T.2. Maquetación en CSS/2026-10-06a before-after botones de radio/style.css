@@ -1,0 +1,70 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+}
+
+form{
+    border: solid;
+    padding: 50px;
+}
+
+input[type=radio][name=bocadillo]{
+    /* accent-color: red; */
+    appearance: none;
+    border: solid 3px red;
+    border-radius: 2rem;
+    width: 2rem;
+    height: 1rem;
+    position:relative;
+    display:inline-flex;
+    align-items: center;
+    transition: 1s linear;
+}
+
+input[type=radio][name=bocadillo]:checked{
+    border-color: green;
+}
+
+input[type=radio][name=bocadillo]::before{
+    content: "🙂";
+    position: absolute;
+    transition-duration: 1s;
+    /* transition-timing-function: cubic-bezier(0.23, 0.5, 0.320, 0.5); */
+    transition-timing-function: linear;
+    /* transition-delay: 1s; */
+    left: 1px;
+
+}
+
+input[type=radio][name=bocadillo]:checked::before{
+    left: calc(1rem - 3px);
+}
+
+/* input[type=radio][name=bocadillo]:not(:checked)::before{
+    content: "🙂";
+    position: absolute;
+    left: 1px;
+
+}
+
+input[type=radio][name=bocadillo]:checked::before{
+    content: "🙂";
+    position: absolute;
+    right: 1px;
+} */
+
+input[type=radio][name=bocadillo]:checked + label{
+    font-weight: bold;
+    color: green;
+    /* transition: 1s linear; */
+}
