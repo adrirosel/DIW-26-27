@@ -1,0 +1,51 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    --ancho:1920px;
+    --alto:1080px;
+    --un-tercio: calc(var(--ancho)/3);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100dvh;
+    background-color: lightpink;
+}
+
+.coche{
+    width: var(--ancho);
+    height: var(--alto);
+    background-image: url(./audi_a3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position:relative;
+}
+
+.coche::before, .coche::after{
+    content: '';
+    position: absolute;
+    width: var(--un-tercio);
+    height: inherit;
+    background-image: inherit;
+    background-size: var(--ancho) var(--alto);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.coche::after{
+    filter: sepia();
+    right: 0;
+    background-position: right center;
+}
+
+.coche::before{
+    filter: grayscale();
+    left: 0;
+    background-position: left center;
+}
