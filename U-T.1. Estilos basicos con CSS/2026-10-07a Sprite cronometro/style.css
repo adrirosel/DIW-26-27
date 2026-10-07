@@ -1,0 +1,30 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* Variables CSS */
+    --height: 90px;
+    --width: calc(900px / 10);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+    
+}
+
+.numero{
+    height: var(--height);
+    width: var(--width);
+    border: solid 2px red;
+    background-image: url('./cronometro.png');
+    background-repeat: no-repeat;
+    /* background-position-x: calc(var(--width) * -9); */
+    /* background-position-x: -810px; */
+    
+}
+
