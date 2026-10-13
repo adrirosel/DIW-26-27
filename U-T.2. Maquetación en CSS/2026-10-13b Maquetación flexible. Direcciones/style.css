@@ -1,0 +1,44 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+    
+}
+
+section{
+    border: solid;
+    height: 400px;
+    margin: 25px;
+    display: flex;
+    /* flex-direction: column; */
+    /*Distribución: Dirección principal*/
+    justify-content: space-evenly;
+    /*Distribución: Dirección secundaria*/
+    align-items: center;
+}
+
+article{
+    border: solid 2px red;
+}
+
+article:first-child{
+    align-self: flex-start;
+
+}
+
+article:last-child{
+    align-self: flex-end;
+}
+
+article:nth-child(2){
+    align-self:center;
+    font-size: 2rem;
+}
+
+article:nth-child(3){
+    align-self: center;
+}
