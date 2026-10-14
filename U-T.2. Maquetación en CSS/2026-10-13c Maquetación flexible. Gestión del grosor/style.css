@@ -52,11 +52,12 @@ ul{
 li{
     background-color: #90EE90;
     color: var(--darkgreen);
-    flex-grow: 1;
+    flex-grow: 1; /*Es el grosor en la direccion principal. No hay que usar width o height (lo que corresponda)*/
     text-align: center;
-    flex-shrink: 0;
-    flex-basis: 0;
+    /* flex-shrink: 0; */ /*Cuando falta espacio, como se le quita a cada etiqueta*/
+    flex-basis: 0; /*Como se reparte el espacio sobrante*/
     /*Las dos últimas son para la siguiente clase*/
+    /*flex:1 0 0 [grow, shrink, basis (En este orden)]*/
 
 }
 
