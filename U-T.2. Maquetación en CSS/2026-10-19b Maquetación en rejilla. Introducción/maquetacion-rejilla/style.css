@@ -1,0 +1,52 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh; /* dynamic viewport height */
+    display: grid; /*Siempre que los hijos los queramos distribuir en dos dimensiones*/
+    /*grid-template-columns: repeat(4, 200px) 100px 200px repeat(4, 100px); Se pueden combinar*/
+    /* grid-template-columns: 1fr 2fr 1fr 1fr; Se pueden mezclar distintas unidades*/
+    /*grid-template-columns: repeat(4, 1fr); fr significa fraccion, espacio repartido en fracciones, cada fraccion ocupa el espacio que le digamos*/
+    /*grid-template-columns: 1fr 100px 200px 1fr; Se pueden mezclar unidades de medida*/
+    /*grid-template-rows: 100px 200px 300px; /*El alto de las 3 primeras filas*/
+    
+    
+    grid-template-columns: repeat(5, 200px); /*El aspecto de las columnas Usar funcion repeat()*/
+    grid-auto-rows: 150px; /*El num de filas es desconocido pero cada una tiene que tener un alto de 150px*/
+    
+
+
+    gap: 10px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+div{
+    border: solid 1px red;
+    border-radius: 0.5rem;
+    box-shadow: 0.25px 0.5px;
+    background-color: lightsalmon;
+    padding: 1rem;
+
+    &:nth-child(10){
+        grid-column-start: 3;
+        background-color: white;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end:5;
+    }
+
+    &:nth-child(20){
+        background-color: lightcoral;
+        grid-column: 2 / span 3; /*Empieza en la columna 2 y extiendete (span) 3*/
+        grid-row: 7 / span 4;
+    }
+}

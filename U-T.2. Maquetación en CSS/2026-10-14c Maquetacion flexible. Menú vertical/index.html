@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Tienda Arcas</header>
-    
-    <nav class="menu">
+    <header>
+        <span>M</span>
+        <span>Tienda Arcas</span>
+    </header>
+
+    <button commandfor="mi-menu" command="toggle-popover">M</button>
+
+    <div id="mi-menu" class="menu" popover>
         <ul>
             <li><a href="">Inicio</a></li>
             <li><a href="">Productos</a></li>
             <li><a href="">Servicios</a></li>
             <li><a href="">Contacto</a></li>
         </ul>
-    </nav>
+    </div>
     
 </body>
 </html>
