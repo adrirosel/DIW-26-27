@@ -1,0 +1,65 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100dvh;
+    display:grid;
+    grid-template-areas: 
+    "rojo       azul       azul"
+    "amarillo   amarillo   amarillo"
+    "gris       verde      marron"
+    "chocolate  verde      marron"
+    "chocolate  negro      oliva"
+    "cyan       cyan       cyan";
+
+    grid-template-rows: 2fr 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.color-rojo{
+    background-color: red;
+    grid-area: rojo;
+}
+.color-azul{
+    background-color: blue;
+    grid-area: azul;
+}
+.color-amarillo{
+    background-color: yellow;
+    grid-area: amarillo;
+}
+.color-gris{
+    background-color: grey;
+    grid-area: gris;
+}
+.color-verde{
+    background-color: green;
+    grid-area: verde;
+}
+.color-marron{
+    background-color: brown;
+    grid-area: marron;
+}
+.color-chocolate{
+    background-color: chocolate;
+    grid-area: chocolate;
+}
+.color-negro{
+    background-color: black;
+    grid-area: negro;
+}
+.color-oliva{
+    background-color: olive;
+    grid-area: oliva;
+}
+.color-cyan{
+    background-color: cyan;
+    grid-area: cyan;
+}
