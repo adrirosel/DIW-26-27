@@ -1,0 +1,125 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.cuadrado-azul {
+    background-color: blue;
+    width: 200px;
+    aspect-ratio: 1;
+    position: absolute;
+    animation: movimiento-cuadrado-azul 10ms;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    rotate: 0.125turn;
+}
+
+@keyframes movimiento-cuadrado-azul {
+    from {
+        left: 10px;
+        top: 800px;
+    }
+    to{
+        left: 1000px;
+        top: 50px;
+    }
+}
+
+.circulo-amarillo{
+    background-color: yellow;
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position:absolute;
+    animation-name: movimiento-circulo-amarillo, cambio-color;
+    animation-duration: 0.5ms, 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    z-index: -1;
+}
+
+.cuadrado-verde{
+    background-color: green;
+    width: 200px;
+    aspect-ratio: 1;
+    position:absolute;
+    animation-name: movimiento-cuadrado-verde;
+    animation-duration: 150ms;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.circulo-blanco{
+    background-color: white;
+    width: 100px;
+    aspect-ratio: 1;
+    position:absolute;
+    border-radius: 50%;
+    z-index: -1;
+    /* animation: movimiento-circulo-blanco 150ms linear 0 infinite alternate both; */
+    animation-name: movimeinto-circulo-blanco;
+    animation-iteration-count: infinite;
+    animation-duration: 150ms;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+@keyframes movimiento-circulo-amarillo {
+    from{
+        right: 50px;
+        bottom: 25px;
+    }
+    to{
+        right: 1600px;
+        bottom: 910px;
+    }
+}
+
+@keyframes cambio-color{
+    from {
+        background-color: lightcoral;
+    }
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes movimiento-cuadrado-verde {
+    0% {
+        left: 10%;
+        top: 10%;
+    }
+    25%{
+        left: 90%;
+        top: 10%;
+    }
+    50%{
+        left: 90%;
+        top: 90%;
+    }
+    75%{
+        left: 10%;
+        top: 90%;
+    }
+    100% {
+        left: 10%;
+        top: 10%;
+    }
+}
+@keyframes movimiento-circulo-blanco {
+    from {
+        left: 10px;
+        top: 800px;
+    }
+    to{
+        left: 1000px;
+        top: 50px;
+    }
+}
