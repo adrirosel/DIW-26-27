@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: green;
+}
+
+.palo {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    transform-origin: top;
+    animation-name: batear;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes batear {
+    0% {
+        transform: rotate(0turn);
+    }
+    50% {
+        transform: rotate(0.15turn)
+    }
+    100% {
+        transform: rotate(0turn);
+    }
+}
+
+.pelota {
+    position: absolute;
+    top: 385px;
+    left: 210px;
+    animation-name: pelota;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+@keyframes pelota {
+    from {
+        left: 210px;
+    } 
+    to {
+        left: 510px;
+
+    }
+}

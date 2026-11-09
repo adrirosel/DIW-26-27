@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script type="module">
+    document.querySelector(".palo").addEventListener("animationend", (_) => {
+      document.querySelector(".pelota").style.animationPlayState = "running";
+    });
+  </script>
+  <body>
+    <svg
+      class="palo"
+      width="12"
+      height="200"
+      viewBox="0 0 12 200"
+      aria-label="Palo de golf"
+    >
+      <rect x="4" y="0" width="6" height="200" fill="#ffd400" />
+    </svg>
+
+    <svg
+      class="pelota"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      aria-label="Pelota de golf"
+    >
+      <circle
+        cx="8"
+        cy="8"
+        r="8"
+        fill="#ffffff"
+        stroke="#cccccc"
+        stroke-width="0.5"
+      />
+    </svg>
+
+  </body>
+</html>
