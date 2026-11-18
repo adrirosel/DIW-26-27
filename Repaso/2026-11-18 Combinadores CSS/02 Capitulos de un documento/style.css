@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.contenedor-titulos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenedor-titulos > h3 {
+  flex: 1;
+  padding: 0.5rem;
+  border-top: solid;
+  border-left: solid;
+  border-bottom: solid;
+}
+
+.contenedor-titulos > h3:last-of-type {
+  border-right: solid;
+}
+
+.contenedor-titulos > h3 > label {
+  display: block;
+  cursor: pointer;
+}
+
+.contenedor-titulos > p {
+  display: none;
+  flex-basis: 100%;
+  order: 1;
+  padding: 0.5rem;
+  border-left: solid;
+  border-right: solid;
+  border-bottom: solid;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.contenedor-titulos > h3:has(input[type="radio"]:checked) {
+  border-bottom: none;
+}
+
+.contenedor-titulos > h3:has(input[type="radio"]:checked) + p {
+  display: block;
+}
