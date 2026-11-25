@@ -1,7 +1,7 @@
 :root {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
-    --width-flag: calc(1539px / 4);
+    --width-flag: calc(1541px / 4);
     --height-flag: calc(4882px / 19);
 }
 
@@ -17,10 +17,10 @@ table, th, tr, td {
 
     td:first-child>label {
         display: block;
-        width: --width-flag;
+        width: var(--width-flag);
         height: var(--height-flag);
         background-image: url(./sprite-flags.png);
-        background-size: 1539px 4882px;
+        background-size: 1541px 4882px;
     }
 
     /* input[type=checkbox] {
@@ -36,11 +36,15 @@ table, th, tr, td {
     }
 
     input[type=checkbox] + span  {
-        display: none;
+        /* display: none; */
+        color: white;
+        transition-duration: 1s;
+        /* transition-property: color; Para distinguir la propiedad que queremos que se vea afectada por la transicion */
     }
 
     input[type=checkbox]:checked + span {
         display: block;
+        color: black;
     }
 
     input[type=checkbox] {
